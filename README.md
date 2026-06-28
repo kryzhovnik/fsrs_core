@@ -1,5 +1,8 @@
 # fsrs_core
 
+[![CI](https://github.com/kryzhovnik/fsrs_core/actions/workflows/ci.yml/badge.svg)](https://github.com/kryzhovnik/fsrs_core/actions/workflows/ci.yml)
+[![Ruby](https://img.shields.io/badge/ruby-%3E%3D%203.2-CC342D?logo=ruby&logoColor=white)](https://www.ruby-lang.org)
+
 Pure-Ruby implementation of the **FSRS-6** spaced-repetition scheduler core, ported verbatim from and
 golden-tested against the Rust [`fsrs`](https://github.com/open-spaced-repetition/fsrs-rs) crate `6.6.1`.
 Module `FsrsCore`.
