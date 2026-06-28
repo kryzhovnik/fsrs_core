@@ -1,0 +1,45 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    name: test ruby ${{ matrix.ruby }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby: ["3.2", "3.3", "3.4", "4.0"]   # 3.2 = lower bound; 4.0 = Duck's runtime
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - run: bundle exec rake test
+      - name: build + install + smoke the packaged gem
+        run: |
+          gem build fsrs_core.gemspec
+          d="$(mktemp -d)"
+          GEM_HOME="$d" GEM_PATH="" gem install ./fsrs_core-*.gem
+          GEM_HOME="$d" GEM_PATH="" ruby -e 'gem "fsrs_core"; require "fsrs_core"; raise unless FsrsCore::FSRS_ALGORITHM == 6 && Gem.loaded_specs.fetch("fsrs_core").version.to_s == FsrsCore::VERSION; puts "smoke ok"'
+
+  oracle:
+    name: Rust FSRS oracle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+          bundler-cache: true
+      - name: install pinned Rust toolchain
+        run: |
+          rustup toolchain install 1.96.0 --profile minimal --no-self-update
+          rustup default 1.96.0
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            test/support/golden_gen/target
+          key: ${{ runner.os }}-rust-1.96.0-fsrs-${{ hashFiles('test/support/golden_gen/Cargo.lock') }}
+      - run: bundle exec rake oracle

@@ -1,0 +1,4 @@
+/pkg/
+*.gem
+# Rust build artifacts from the one-shot golden generator (dev-only)
+target/

@@ -1,0 +1,568 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "again": {
+          "difficulty": 6.413300037384033,
+          "interval": 0.21199999749660492,
+          "stability": 0.21199999749660492
+        },
+        "easy": {
+          "difficulty": 1.0,
+          "interval": 8.295599937438965,
+          "stability": 8.295599937438965
+        },
+        "good": {
+          "difficulty": 2.1181039810180664,
+          "interval": 2.30649995803833,
+          "stability": 2.30649995803833
+        },
+        "hard": {
+          "difficulty": 5.112170696258545,
+          "interval": 1.2930999994277954,
+          "stability": 1.2930999994277954
+        }
+      },
+      "input": {
+        "days_elapsed": 0,
+        "desired_retention": 0.8999999761581421,
+        "memory": null
+      },
+      "kind": "next_states",
+      "name": "new_card_d0"
+    },
+    {
+      "expected": {
+        "again": {
+          "difficulty": 8.34176254272461,
+          "interval": 1.3411083221435547,
+          "stability": 1.3411083221435547
+        },
+        "easy": {
+          "difficulty": 3.3144614696502686,
+          "interval": 41.645286560058594,
+          "stability": 41.645286560058594
+        },
+        "good": {
+          "difficulty": 4.990228176116943,
+          "interval": 26.89640998840332,
+          "stability": 26.89640998840332
+        },
+        "hard": {
+          "difficulty": 6.6659955978393555,
+          "interval": 20.1614990234375,
+          "stability": 20.1614990234375
+        }
+      },
+      "input": {
+        "days_elapsed": 7,
+        "desired_retention": 0.8999999761581421,
+        "memory": {
+          "difficulty": 5.0,
+          "stability": 10.0
+        }
+      },
+      "kind": "next_states",
+      "name": "existing_d7"
+    },
+    {
+      "expected": {
+        "again": {
+          "difficulty": 8.34176254272461,
+          "interval": 3.051248788833618,
+          "stability": 3.051248788833618
+        },
+        "easy": {
+          "difficulty": 3.3144614696502686,
+          "interval": 15.534309387207031,
+          "stability": 15.534309387207031
+        },
+        "good": {
+          "difficulty": 4.990228176116943,
+          "interval": 10.0,
+          "stability": 10.0
+        },
+        "hard": {
+          "difficulty": 6.6659955978393555,
+          "interval": 10.0,
+          "stability": 10.0
+        }
+      },
+      "input": {
+        "days_elapsed": 0,
+        "desired_retention": 0.8999999761581421,
+        "memory": {
+          "difficulty": 5.0,
+          "stability": 10.0
+        }
+      },
+      "kind": "next_states",
+      "name": "existing_d0_sameday"
+    },
+    {
+      "expected": {
+        "again": {
+          "difficulty": 9.820881843566895,
+          "interval": 3.0775790214538574,
+          "stability": 3.0775790214538574
+        },
+        "easy": {
+          "difficulty": 9.318151473999023,
+          "interval": 103.01636505126953,
+          "stability": 103.01636505126953
+        },
+        "good": {
+          "difficulty": 9.48572826385498,
+          "interval": 101.61052703857422,
+          "stability": 101.61052703857422
+        },
+        "hard": {
+          "difficulty": 9.653305053710938,
+          "interval": 100.96857452392578,
+          "stability": 100.96857452392578
+        }
+      },
+      "input": {
+        "days_elapsed": 3,
+        "desired_retention": 0.8999999761581421,
+        "memory": {
+          "difficulty": 9.5,
+          "stability": 100.0
+        }
+      },
+      "kind": "next_states",
+      "name": "highdiff_d3"
+    },
+    {
+      "expected": {
+        "again": {
+          "difficulty": 7.026989459991455,
+          "interval": 21.99769401550293,
+          "stability": 21.99769401550293
+        },
+        "easy": {
+          "difficulty": 1.0,
+          "interval": 36500.0,
+          "stability": 36500.0
+        },
+        "good": {
+          "difficulty": 1.0,
+          "interval": 36500.0,
+          "stability": 36500.0
+        },
+        "hard": {
+          "difficulty": 4.010608673095703,
+          "interval": 36500.0,
+          "stability": 36500.0
+        }
+      },
+      "input": {
+        "days_elapsed": 1,
+        "desired_retention": 0.8999999761581421,
+        "memory": {
+          "difficulty": 1.0,
+          "stability": 36500.0
+        }
+      },
+      "kind": "next_states",
+      "name": "smax_saturate"
+    },
+    {
+      "expected": {
+        "difficulty": 2.1043312549591064,
+        "stability": 21.426223754882812
+      },
+      "input": {
+        "reviews": [
+          {
+            "delta_t": 0,
+            "rating": 3
+          },
+          {
+            "delta_t": 0,
+            "rating": 3
+          },
+          {
+            "delta_t": 7,
+            "rating": 3
+          }
+        ]
+      },
+      "kind": "memory_state",
+      "name": "replay_shortterm"
+    },
+    {
+      "expected": {
+        "difficulty": 1.0,
+        "stability": 114.37310028076172
+      },
+      "input": {
+        "reviews": [
+          {
+            "delta_t": 0,
+            "rating": 3
+          },
+          {
+            "delta_t": 7,
+            "rating": 3
+          },
+          {
+            "delta_t": 16,
+            "rating": 4
+          }
+        ]
+      },
+      "kind": "memory_state",
+      "name": "replay_longterm"
+    },
+    {
+      "expected": {
+        "difficulty": 7.382336139678955,
+        "stability": 5.161157608032227
+      },
+      "input": {
+        "reviews": [
+          {
+            "delta_t": 0,
+            "rating": 3
+          },
+          {
+            "delta_t": 10,
+            "rating": 1
+          },
+          {
+            "delta_t": 5,
+            "rating": 3
+          }
+        ]
+      },
+      "kind": "memory_state",
+      "name": "replay_lapse"
+    },
+    {
+      "expected": {
+        "interval": 16.579790115356445
+      },
+      "input": {
+        "desired_retention": 0.800000011920929,
+        "stability": 5.0
+      },
+      "kind": "next_interval",
+      "name": "ni_s5_r80"
+    },
+    {
+      "expected": {
+        "interval": 2.01279354095459
+      },
+      "input": {
+        "desired_retention": 0.949999988079071,
+        "stability": 5.0
+      },
+      "kind": "next_interval",
+      "name": "ni_s5_r95"
+    },
+    {
+      "expected": {
+        "interval": 165.7978973388672
+      },
+      "input": {
+        "desired_retention": 0.800000011920929,
+        "stability": 50.0
+      },
+      "kind": "next_interval",
+      "name": "ni_s50_r80"
+    },
+    {
+      "expected": {
+        "interval": 20.1279354095459
+      },
+      "input": {
+        "desired_retention": 0.949999988079071,
+        "stability": 50.0
+      },
+      "kind": "next_interval",
+      "name": "ni_s50_r95"
+    },
+    {
+      "expected": {
+        "interval": 121032.4609375
+      },
+      "input": {
+        "desired_retention": 0.800000011920929,
+        "stability": 36500.0
+      },
+      "kind": "next_interval",
+      "name": "ni_s36500_r80"
+    },
+    {
+      "expected": {
+        "interval": 14693.392578125
+      },
+      "input": {
+        "desired_retention": 0.949999988079071,
+        "stability": 36500.0
+      },
+      "kind": "next_interval",
+      "name": "ni_s36500_r95"
+    },
+    {
+      "expected": {
+        "interval": 4450.39892578125
+      },
+      "input": {
+        "desired_retention": 0.800000011920929,
+        "parameters": [
+          0.21199999749660492,
+          1.2930999994277954,
+          2.30649995803833,
+          8.295599937438965,
+          6.413300037384033,
+          0.8334000110626221,
+          3.019399881362915,
+          0.0010000000474974513,
+          1.8722000122070312,
+          0.16660000383853912,
+          0.7960000038146973,
+          1.4835000038146973,
+          0.061400000005960464,
+          0.2628999948501587,
+          1.648300051689148,
+          0.6014000177383423,
+          1.8729000091552734,
+          0.5425000190734863,
+          0.09120000153779984,
+          0.0658000037074089,
+          0.10000000149011612
+        ],
+        "stability": 1000.0
+      },
+      "kind": "next_interval",
+      "name": "ni_decaylo_r80"
+    },
+    {
+      "expected": {
+        "interval": 2285.438720703125
+      },
+      "input": {
+        "desired_retention": 0.800000011920929,
+        "parameters": [
+          0.21199999749660492,
+          1.2930999994277954,
+          2.30649995803833,
+          8.295599937438965,
+          6.413300037384033,
+          0.8334000110626221,
+          3.019399881362915,
+          0.0010000000474974513,
+          1.8722000122070312,
+          0.16660000383853912,
+          0.7960000038146973,
+          1.4835000038146973,
+          0.061400000005960464,
+          0.2628999948501587,
+          1.648300051689148,
+          0.6014000177383423,
+          1.8729000091552734,
+          0.5425000190734863,
+          0.09120000153779984,
+          0.0658000037074089,
+          0.800000011920929
+        ],
+        "stability": 1000.0
+      },
+      "kind": "next_interval",
+      "name": "ni_decayhi_r80"
+    },
+    {
+      "expected": {
+        "interval": 358.77545166015625
+      },
+      "input": {
+        "desired_retention": 0.949999988079071,
+        "parameters": [
+          0.21199999749660492,
+          1.2930999994277954,
+          2.30649995803833,
+          8.295599937438965,
+          6.413300037384033,
+          0.8334000110626221,
+          3.019399881362915,
+          0.0010000000474974513,
+          1.8722000122070312,
+          0.16660000383853912,
+          0.7960000038146973,
+          1.4835000038146973,
+          0.061400000005960464,
+          0.2628999948501587,
+          1.648300051689148,
+          0.6014000177383423,
+          1.8729000091552734,
+          0.5425000190734863,
+          0.09120000153779984,
+          0.0658000037074089,
+          0.10000000149011612
+        ],
+        "stability": 1000.0
+      },
+      "kind": "next_interval",
+      "name": "ni_decaylo_r95"
+    },
+    {
+      "expected": {
+        "interval": 470.39984130859375
+      },
+      "input": {
+        "desired_retention": 0.949999988079071,
+        "parameters": [
+          0.21199999749660492,
+          1.2930999994277954,
+          2.30649995803833,
+          8.295599937438965,
+          6.413300037384033,
+          0.8334000110626221,
+          3.019399881362915,
+          0.0010000000474974513,
+          1.8722000122070312,
+          0.16660000383853912,
+          0.7960000038146973,
+          1.4835000038146973,
+          0.061400000005960464,
+          0.2628999948501587,
+          1.648300051689148,
+          0.6014000177383423,
+          1.8729000091552734,
+          0.5425000190734863,
+          0.09120000153779984,
+          0.0658000037074089,
+          0.800000011920929
+        ],
+        "stability": 1000.0
+      },
+      "kind": "next_interval",
+      "name": "ni_decayhi_r95"
+    },
+    {
+      "expected": {
+        "again": {
+          "difficulty": 8.34176254272461,
+          "interval": 1.831563949584961,
+          "stability": 1.831563949584961
+        },
+        "easy": {
+          "difficulty": 3.3144614696502686,
+          "interval": 127.61041259765625,
+          "stability": 127.61041259765625
+        },
+        "good": {
+          "difficulty": 4.990228176116943,
+          "interval": 114.7420654296875,
+          "stability": 114.7420654296875
+        },
+        "hard": {
+          "difficulty": 6.6659955978393555,
+          "interval": 108.86588287353516,
+          "stability": 108.86588287353516
+        }
+      },
+      "input": {
+        "days_elapsed": 7,
+        "desired_retention": 0.9,
+        "memory": {
+          "difficulty": 5.0,
+          "stability": 100.0
+        },
+        "parameters": [
+          0.21199999749660492,
+          1.2930999994277954,
+          2.30649995803833,
+          8.295599937438965,
+          6.413300037384033,
+          0.8334000110626221,
+          3.019399881362915,
+          0.0010000000474974513,
+          1.8722000122070312,
+          0.16660000383853912,
+          0.7960000038146973,
+          1.4835000038146973,
+          0.061400000005960464,
+          0.2628999948501587,
+          1.648300051689148,
+          0.6014000177383423,
+          1.8729000091552734,
+          2.0,
+          2.0,
+          0.0658000037074089,
+          0.1542000025510788
+        ]
+      },
+      "kind": "next_states",
+      "name": "cap_active_lapse"
+    },
+    {
+      "expected": {
+        "retrievability": 1.0
+      },
+      "input": {
+        "days_elapsed": 0.0,
+        "memory": {
+          "difficulty": 5.0,
+          "stability": 10.0
+        }
+      },
+      "kind": "current_retrievability",
+      "name": "retr_t0"
+    },
+    {
+      "expected": {
+        "retrievability": 0.8999999761581421
+      },
+      "input": {
+        "days_elapsed": 10.0,
+        "memory": {
+          "difficulty": 5.0,
+          "stability": 10.0
+        }
+      },
+      "kind": "current_retrievability",
+      "name": "retr_t10"
+    },
+    {
+      "expected": {
+        "retrievability": 0.6928266286849976
+      },
+      "input": {
+        "days_elapsed": 100.0,
+        "memory": {
+          "difficulty": 5.0,
+          "stability": 10.0
+        }
+      },
+      "kind": "current_retrievability",
+      "name": "retr_large"
+    }
+  ],
+  "crate_version": "6.6.1",
+  "default_parameters": [
+    0.21199999749660492,
+    1.2930999994277954,
+    2.30649995803833,
+    8.295599937438965,
+    6.413300037384033,
+    0.8334000110626221,
+    3.019399881362915,
+    0.0010000000474974513,
+    1.8722000122070312,
+    0.16660000383853912,
+    0.7960000038146973,
+    1.4835000038146973,
+    0.061400000005960464,
+    0.2628999948501587,
+    1.648300051689148,
+    0.6014000177383423,
+    1.8729000091552734,
+    0.5425000190734863,
+    0.09120000153779984,
+    0.0658000037074089,
+    0.1542000025510788
+  ]
+}
