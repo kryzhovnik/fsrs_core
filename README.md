@@ -1,7 +1,8 @@
 # fsrs_core
 
 Pure-Ruby implementation of the **FSRS-6** spaced-repetition scheduler core, ported verbatim from and
-golden-tested against the Rust `fsrs` crate `6.6.1`. Module `FsrsCore`.
+golden-tested against the Rust [`fsrs`](https://github.com/open-spaced-repetition/fsrs-rs) crate `6.6.1`.
+Module `FsrsCore`.
 
 ## Scope (v0.1)
 
