@@ -5,6 +5,13 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Duck step sequences (`test/support/duck_step_sequences.json`): the `next_state` calls behind
+  Duck's scheduler vectors, checked in f64 with a 1e-9 relative tolerance.
+
 ## [0.1.0] - 2026-06-28
 
 ### Added

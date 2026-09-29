@@ -1,0 +1,1734 @@
+[
+  {
+    "description": "new card passed at each due date",
+    "desired_retention": 0.9,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2.3064999999999993
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.307,
+          "difficulty": 2.111110369296838,
+          "interval": 2.306999999999999
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.111
+        },
+        "days_elapsed": 3,
+        "rating": 3,
+        "expected": {
+          "stability": 13.83702561760761,
+          "difficulty": 2.1041173692968385,
+          "interval": 13.837025617607608
+        }
+      },
+      {
+        "memory": {
+          "stability": 13.837,
+          "difficulty": 2.104
+        },
+        "days_elapsed": 8,
+        "rating": 3,
+        "expected": {
+          "stability": 42.09668484885241,
+          "difficulty": 2.0971243692968384,
+          "interval": 42.096684848852405
+        }
+      },
+      {
+        "memory": {
+          "stability": 42.097,
+          "difficulty": 2.097
+        },
+        "days_elapsed": 21,
+        "rating": 3,
+        "expected": {
+          "stability": 105.53805820855986,
+          "difficulty": 2.0901313692968384,
+          "interval": 105.53805820855983
+        }
+      }
+    ]
+  },
+  {
+    "description": "new card failed twice, then passed",
+    "desired_retention": 0.9,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 0.212,
+          "difficulty": 6.4133,
+          "interval": 0.21199999999999994
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.212,
+          "difficulty": 6.413
+        },
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 0.08335671711031603,
+          "difficulty": 8.806205860896839,
+          "interval": 0.083356717110316
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.083,
+          "difficulty": 8.806
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 0.10272825421427298,
+          "difficulty": 8.792422369296837,
+          "interval": 0.10272825421427297
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.103,
+          "difficulty": 8.792
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 0.12568391175206323,
+          "difficulty": 8.778436369296838,
+          "interval": 0.1256839117520632
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.126,
+          "difficulty": 8.778
+        },
+        "days_elapsed": 1,
+        "rating": 3,
+        "expected": {
+          "stability": 0.779822653050623,
+          "difficulty": 8.764450369296839,
+          "interval": 0.7798226530506228
+        }
+      }
+    ]
+  },
+  {
+    "description": "reviewing card lapses, relearns the same day and graduates again",
+    "desired_retention": 0.9,
+    "steps": [
+      {
+        "memory": {
+          "stability": 20.513,
+          "difficulty": 5.204
+        },
+        "days_elapsed": 20,
+        "rating": 1,
+        "expected": {
+          "stability": 1.9556321822660598,
+          "difficulty": 8.40881578209684,
+          "interval": 1.9556321822660594
+        }
+      },
+      {
+        "memory": {
+          "stability": 1.956,
+          "difficulty": 8.409
+        },
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 0.664468536024935,
+          "difficulty": 9.46227748809684,
+          "interval": 0.6644685360249348
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.664,
+          "difficulty": 9.462
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 0.7167316346880193,
+          "difficulty": 9.447766369296838,
+          "interval": 0.7167316346880191
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.717,
+          "difficulty": 9.448
+        },
+        "days_elapsed": 2,
+        "rating": 3,
+        "expected": {
+          "stability": 1.922468967109765,
+          "difficulty": 9.433780369296839,
+          "interval": 1.9224689671097646
+        }
+      }
+    ]
+  },
+  {
+    "description": "partial days floor: 1 day 23 hours counts one elapsed day",
+    "desired_retention": 0.9,
+    "steps": [
+      {
+        "memory": {
+          "stability": 4.25,
+          "difficulty": 6.1
+        },
+        "days_elapsed": 1,
+        "rating": 3,
+        "expected": {
+          "stability": 6.951743643890641,
+          "difficulty": 6.089128369296838,
+          "interval": 6.95174364389064
+        }
+      }
+    ]
+  },
+  {
+    "description": "a review earlier than last_review_at counts zero elapsed days and keeps last_review_at",
+    "desired_retention": 0.9,
+    "steps": [
+      {
+        "memory": {
+          "stability": 12.0,
+          "difficulty": 5.0
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 12.0,
+          "difficulty": 4.9902283692968386,
+          "interval": 11.999999999999996
+        }
+      }
+    ]
+  },
+  {
+    "description": "mature card fails like a reviewing one but counts no lapse",
+    "desired_retention": 0.9,
+    "steps": [
+      {
+        "memory": {
+          "stability": 150.4,
+          "difficulty": 3.3
+        },
+        "days_elapsed": 90,
+        "rating": 1,
+        "expected": {
+          "stability": 4.234210055856388,
+          "difficulty": 7.782983929296838,
+          "interval": 4.234210055856387
+        }
+      },
+      {
+        "memory": {
+          "stability": 4.234,
+          "difficulty": 7.783
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 4.234,
+          "difficulty": 7.770445369296839,
+          "interval": 4.233999999999999
+        }
+      }
+    ]
+  },
+  {
+    "description": "retention 0.80 schedules longer intervals",
+    "desired_retention": 0.8,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 7.6482612469417575
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.307,
+          "difficulty": 2.111110369296838,
+          "interval": 7.6499192268348715
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.111
+        },
+        "days_elapsed": 4,
+        "rating": 3,
+        "expected": {
+          "stability": 16.18949837039212,
+          "difficulty": 2.1041173692968385,
+          "interval": 53.683725555472265
+        }
+      },
+      {
+        "memory": {
+          "stability": 16.189,
+          "difficulty": 2.104
+        },
+        "days_elapsed": 15,
+        "rating": 3,
+        "expected": {
+          "stability": 62.3709060149304,
+          "difficulty": 2.0971243692968384,
+          "interval": 206.8194161763012
+        }
+      }
+    ]
+  },
+  {
+    "description": "retention 0.95 schedules shorter intervals",
+    "desired_retention": 0.95,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 0.9285016230749165
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.307,
+          "difficulty": 2.111110369296838,
+          "interval": 0.9287029024209112
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.111
+        },
+        "days_elapsed": 2,
+        "rating": 3,
+        "expected": {
+          "stability": 10.971936352287461,
+          "difficulty": 2.1041173692968385,
+          "interval": 4.416848346574284
+        }
+      },
+      {
+        "memory": {
+          "stability": 10.972,
+          "difficulty": 2.104
+        },
+        "days_elapsed": 5,
+        "rating": 1,
+        "expected": {
+          "stability": 1.4294816037091678,
+          "difficulty": 7.389866862096838,
+          "interval": 0.5754502446129186
+        }
+      },
+      {
+        "memory": {
+          "stability": 1.429,
+          "difficulty": 7.39
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 1.4666222249065999,
+          "difficulty": 7.377838369296838,
+          "interval": 0.5904015245018527
+        }
+      }
+    ]
+  },
+  {
+    "description": "retention 1.00 gives a zero interval that graduates to one day",
+    "desired_retention": 1.0,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 0.0
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.307,
+          "difficulty": 2.111110369296838,
+          "interval": 0.0
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.111
+        },
+        "days_elapsed": 1,
+        "rating": 3,
+        "expected": {
+          "stability": 7.3198032579621355,
+          "difficulty": 2.1041173692968385,
+          "interval": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "description": "graduation across a daylight-saving switch keeps 86400-second days",
+    "desired_retention": 0.9,
+    "steps": [
+      {
+        "memory": {
+          "stability": 6.0,
+          "difficulty": 5.5
+        },
+        "days_elapsed": 6,
+        "rating": 3,
+        "expected": {
+          "stability": 19.190847798142713,
+          "difficulty": 5.489728369296838,
+          "interval": 19.19084779814271
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 1",
+    "desired_retention": 0.95,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 0.9285016230749165
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 200,
+        "rating": 3,
+        "expected": {
+          "stability": 58.54007571185921,
+          "difficulty": 2.111110369296838,
+          "interval": 23.56581630756114
+        }
+      },
+      {
+        "memory": {
+          "stability": 58.54,
+          "difficulty": 2.111
+        },
+        "days_elapsed": 400,
+        "rating": 3,
+        "expected": {
+          "stability": 470.39050771174664,
+          "difficulty": 2.1041173692968385,
+          "interval": 189.35978750894895
+        }
+      },
+      {
+        "memory": {
+          "stability": 470.391,
+          "difficulty": 2.104
+        },
+        "days_elapsed": 1,
+        "rating": 3,
+        "expected": {
+          "stability": 472.8853642967832,
+          "difficulty": 2.0971243692968384,
+          "interval": 190.3641137125239
+        }
+      },
+      {
+        "memory": {
+          "stability": 472.885,
+          "difficulty": 2.097
+        },
+        "days_elapsed": 30,
+        "rating": 1,
+        "expected": {
+          "stability": 5.831818875595275,
+          "difficulty": 7.387566009696838,
+          "interval": 2.347649378482179
+        }
+      },
+      {
+        "memory": {
+          "stability": 5.832,
+          "difficulty": 7.388
+        },
+        "days_elapsed": 7,
+        "rating": 3,
+        "expected": {
+          "stability": 15.444403740479546,
+          "difficulty": 7.375840369296838,
+          "interval": 6.217278968332784
+        }
+      },
+      {
+        "memory": {
+          "stability": 15.444,
+          "difficulty": 7.376
+        },
+        "days_elapsed": 200,
+        "rating": 3,
+        "expected": {
+          "stability": 85.23044218810831,
+          "difficulty": 7.363852369296839,
+          "interval": 34.31025532497351
+        }
+      },
+      {
+        "memory": {
+          "stability": 85.23,
+          "difficulty": 7.364
+        },
+        "days_elapsed": 7,
+        "rating": 3,
+        "expected": {
+          "stability": 94.35193781443971,
+          "difficulty": 7.351864369296838,
+          "interval": 37.9821926733019
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 2",
+    "desired_retention": 0.9,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 2.3064999999999993
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 2,
+        "rating": 3,
+        "expected": {
+          "stability": 10.965112800204436,
+          "difficulty": 2.111110369296838,
+          "interval": 10.965112800204434
+        }
+      },
+      {
+        "memory": {
+          "stability": 10.965,
+          "difficulty": 2.111
+        },
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 3.325475163930128,
+          "difficulty": 7.392167714496837,
+          "interval": 3.3254751639301277
+        }
+      },
+      {
+        "memory": {
+          "stability": 3.325,
+          "difficulty": 7.392
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 3.325,
+          "difficulty": 7.3798363692968385,
+          "interval": 3.3249999999999993
+        }
+      },
+      {
+        "memory": {
+          "stability": 3.325,
+          "difficulty": 7.38
+        },
+        "days_elapsed": 2,
+        "rating": 3,
+        "expected": {
+          "stability": 6.941466646910301,
+          "difficulty": 7.367848369296838,
+          "interval": 6.941466646910299
+        }
+      },
+      {
+        "memory": {
+          "stability": 6.941,
+          "difficulty": 7.368
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 6.941,
+          "difficulty": 7.355860369296838,
+          "interval": 6.940999999999998
+        }
+      },
+      {
+        "memory": {
+          "stability": 6.941,
+          "difficulty": 7.356
+        },
+        "days_elapsed": 5,
+        "rating": 3,
+        "expected": {
+          "stability": 14.679146076769202,
+          "difficulty": 7.343872369296838,
+          "interval": 14.679146076769198
+        }
+      },
+      {
+        "memory": {
+          "stability": 14.679,
+          "difficulty": 7.344
+        },
+        "days_elapsed": 30,
+        "rating": 1,
+        "expected": {
+          "stability": 1.8023174814008949,
+          "difficulty": 9.112219230096839,
+          "interval": 1.8023174814008944
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 3",
+    "desired_retention": 0.9,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 0.212,
+          "difficulty": 6.4133,
+          "interval": 0.21199999999999994
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.212,
+          "difficulty": 6.413
+        },
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 0.08335671711031603,
+          "difficulty": 8.806205860896839,
+          "interval": 0.083356717110316
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.083,
+          "difficulty": 8.806
+        },
+        "days_elapsed": 12,
+        "rating": 3,
+        "expected": {
+          "stability": 1.033957806455242,
+          "difficulty": 8.792422369296837,
+          "interval": 1.0339578064552415
+        }
+      },
+      {
+        "memory": {
+          "stability": 1.034,
+          "difficulty": 8.792
+        },
+        "days_elapsed": 7,
+        "rating": 3,
+        "expected": {
+          "stability": 4.56067278788086,
+          "difficulty": 8.778436369296838,
+          "interval": 4.5606727878808595
+        }
+      },
+      {
+        "memory": {
+          "stability": 4.561,
+          "difficulty": 8.778
+        },
+        "days_elapsed": 12,
+        "rating": 3,
+        "expected": {
+          "stability": 12.375053035748664,
+          "difficulty": 8.764450369296839,
+          "interval": 12.37505303574866
+        }
+      },
+      {
+        "memory": {
+          "stability": 12.375,
+          "difficulty": 8.764
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 12.375,
+          "difficulty": 8.750464369296838,
+          "interval": 12.374999999999996
+        }
+      },
+      {
+        "memory": {
+          "stability": 12.375,
+          "difficulty": 8.75
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 12.375,
+          "difficulty": 8.736478369296838,
+          "interval": 12.374999999999996
+        }
+      },
+      {
+        "memory": {
+          "stability": 12.375,
+          "difficulty": 8.736
+        },
+        "days_elapsed": 7,
+        "rating": 3,
+        "expected": {
+          "stability": 18.81418642958121,
+          "difficulty": 8.72249236929684,
+          "interval": 18.814186429581206
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 4",
+    "desired_retention": 0.9,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 0.212,
+          "difficulty": 6.4133,
+          "interval": 0.21199999999999994
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.212,
+          "difficulty": 6.413
+        },
+        "days_elapsed": 60,
+        "rating": 3,
+        "expected": {
+          "stability": 5.018574291210254,
+          "difficulty": 6.4018153692968385,
+          "interval": 5.018574291210253
+        }
+      },
+      {
+        "memory": {
+          "stability": 5.019,
+          "difficulty": 6.402
+        },
+        "days_elapsed": 200,
+        "rating": 3,
+        "expected": {
+          "stability": 52.34175354028795,
+          "difficulty": 6.390826369296838,
+          "interval": 52.34175354028793
+        }
+      },
+      {
+        "memory": {
+          "stability": 52.342,
+          "difficulty": 6.391
+        },
+        "days_elapsed": 7,
+        "rating": 3,
+        "expected": {
+          "stability": 64.58587770568283,
+          "difficulty": 6.379837369296839,
+          "interval": 64.58587770568282
+        }
+      },
+      {
+        "memory": {
+          "stability": 64.586,
+          "difficulty": 6.38
+        },
+        "days_elapsed": 30,
+        "rating": 3,
+        "expected": {
+          "stability": 108.93413583383686,
+          "difficulty": 6.368848369296838,
+          "interval": 108.93413583383685
+        }
+      },
+      {
+        "memory": {
+          "stability": 108.934,
+          "difficulty": 6.369
+        },
+        "days_elapsed": 30,
+        "rating": 3,
+        "expected": {
+          "stability": 152.80995566115655,
+          "difficulty": 6.357859369296838,
+          "interval": 152.80995566115652
+        }
+      },
+      {
+        "memory": {
+          "stability": 152.81,
+          "difficulty": 6.358
+        },
+        "days_elapsed": 5,
+        "rating": 3,
+        "expected": {
+          "stability": 160.53978573059752,
+          "difficulty": 6.346870369296838,
+          "interval": 160.5397857305975
+        }
+      },
+      {
+        "memory": {
+          "stability": 160.54,
+          "difficulty": 6.347
+        },
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 40.806892239064865,
+          "difficulty": 8.78451210969684,
+          "interval": 40.80689223906486
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 5",
+    "desired_retention": 0.8,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 7.6482612469417575
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 12,
+        "rating": 3,
+        "expected": {
+          "stability": 27.08107308396605,
+          "difficulty": 2.111110369296838,
+          "interval": 89.79974931441363
+        }
+      },
+      {
+        "memory": {
+          "stability": 27.081,
+          "difficulty": 2.111
+        },
+        "days_elapsed": 60,
+        "rating": 3,
+        "expected": {
+          "stability": 152.30138075508705,
+          "difficulty": 2.1041173692968385,
+          "interval": 505.0252539713216
+        }
+      },
+      {
+        "memory": {
+          "stability": 152.301,
+          "difficulty": 2.104
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 152.301,
+          "difficulty": 2.0971243692968384,
+          "interval": 505.0239914027645
+        }
+      },
+      {
+        "memory": {
+          "stability": 152.301,
+          "difficulty": 2.097
+        },
+        "days_elapsed": 5,
+        "rating": 3,
+        "expected": {
+          "stability": 167.13358029005138,
+          "difficulty": 2.0901313692968384,
+          "interval": 554.2082311706173
+        }
+      },
+      {
+        "memory": {
+          "stability": 167.134,
+          "difficulty": 2.09
+        },
+        "days_elapsed": 7,
+        "rating": 3,
+        "expected": {
+          "stability": 187.50593171701038,
+          "difficulty": 2.083138369296838,
+          "interval": 621.7621292533786
+        }
+      },
+      {
+        "memory": {
+          "stability": 187.506,
+          "difficulty": 2.083
+        },
+        "days_elapsed": 3,
+        "rating": 3,
+        "expected": {
+          "stability": 196.18817063655476,
+          "difficulty": 2.0761453692968383,
+          "interval": 650.5520843650372
+        }
+      },
+      {
+        "memory": {
+          "stability": 196.188,
+          "difficulty": 2.076
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 196.188,
+          "difficulty": 2.0691523692968383,
+          "interval": 650.5515185410836
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 6",
+    "desired_retention": 0.9,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 0.212,
+          "difficulty": 6.4133,
+          "interval": 0.21199999999999994
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.212,
+          "difficulty": 6.413
+        },
+        "days_elapsed": 12,
+        "rating": 1,
+        "expected": {
+          "stability": 0.147236464929187,
+          "difficulty": 8.806205860896839,
+          "interval": 0.14723646492918693
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.147,
+          "difficulty": 8.806
+        },
+        "days_elapsed": 2,
+        "rating": 3,
+        "expected": {
+          "stability": 1.0343809489469153,
+          "difficulty": 8.792422369296837,
+          "interval": 1.0343809489469151
+        }
+      },
+      {
+        "memory": {
+          "stability": 1.034,
+          "difficulty": 8.792
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 1.0840573069604496,
+          "difficulty": 8.778436369296838,
+          "interval": 1.0840573069604493
+        }
+      },
+      {
+        "memory": {
+          "stability": 1.084,
+          "difficulty": 8.778
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 1.1329519968867208,
+          "difficulty": 8.764450369296839,
+          "interval": 1.1329519968867205
+        }
+      },
+      {
+        "memory": {
+          "stability": 1.133,
+          "difficulty": 8.764
+        },
+        "days_elapsed": 1,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3541008210768406,
+          "difficulty": 8.750464369296838,
+          "interval": 2.35410082107684
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.354,
+          "difficulty": 8.75
+        },
+        "days_elapsed": 400,
+        "rating": 3,
+        "expected": {
+          "stability": 18.611717237896972,
+          "difficulty": 8.736478369296838,
+          "interval": 18.61171723789697
+        }
+      },
+      {
+        "memory": {
+          "stability": 18.612,
+          "difficulty": 8.736
+        },
+        "days_elapsed": 1,
+        "rating": 1,
+        "expected": {
+          "stability": 1.561360066974531,
+          "difficulty": 9.569760164496838,
+          "interval": 1.5613600669745304
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 7",
+    "desired_retention": 0.95,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 0.9285016230749165
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 400,
+        "rating": 3,
+        "expected": {
+          "stability": 65.61535151628614,
+          "difficulty": 2.111110369296838,
+          "interval": 26.414030080859686
+        }
+      },
+      {
+        "memory": {
+          "stability": 65.615,
+          "difficulty": 2.111
+        },
+        "days_elapsed": 3,
+        "rating": 3,
+        "expected": {
+          "stability": 75.77436170736921,
+          "difficulty": 2.1041173692968385,
+          "interval": 30.50362793529508
+        }
+      },
+      {
+        "memory": {
+          "stability": 75.774,
+          "difficulty": 2.104
+        },
+        "days_elapsed": 1,
+        "rating": 3,
+        "expected": {
+          "stability": 79.13638526271583,
+          "difficulty": 2.0971243692968384,
+          "interval": 31.85703974017496
+        }
+      },
+      {
+        "memory": {
+          "stability": 79.136,
+          "difficulty": 2.097
+        },
+        "days_elapsed": 7,
+        "rating": 3,
+        "expected": {
+          "stability": 101.68190912432418,
+          "difficulty": 2.0901313692968384,
+          "interval": 40.93293633613317
+        }
+      },
+      {
+        "memory": {
+          "stability": 101.682,
+          "difficulty": 2.09
+        },
+        "days_elapsed": 60,
+        "rating": 1,
+        "expected": {
+          "stability": 3.7733433699478622,
+          "difficulty": 7.385265157296838,
+          "interval": 1.5189921714353196
+        }
+      },
+      {
+        "memory": {
+          "stability": 3.773,
+          "difficulty": 7.385
+        },
+        "days_elapsed": 2,
+        "rating": 3,
+        "expected": {
+          "stability": 7.3987374567581705,
+          "difficulty": 7.372843369296838,
+          "interval": 2.9784260729699286
+        }
+      },
+      {
+        "memory": {
+          "stability": 7.399,
+          "difficulty": 7.373
+        },
+        "days_elapsed": 12,
+        "rating": 3,
+        "expected": {
+          "stability": 21.747424636122787,
+          "difficulty": 7.360855369296838,
+          "interval": 8.754614815668516
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 8",
+    "desired_retention": 0.95,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 0.9285016230749165
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 0.7752409475844925,
+          "difficulty": 7.394468566896838,
+          "interval": 0.31207998183669516
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.775,
+          "difficulty": 7.394
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 0.8280809699335094,
+          "difficulty": 7.381834369296838,
+          "interval": 0.3333511921182374
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.828,
+          "difficulty": 7.382
+        },
+        "days_elapsed": 30,
+        "rating": 1,
+        "expected": {
+          "stability": 0.4549401247165771,
+          "difficulty": 9.124709571696837,
+          "interval": 0.18314010153966906
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.455,
+          "difficulty": 9.125
+        },
+        "days_elapsed": 200,
+        "rating": 1,
+        "expected": {
+          "stability": 0.3653938821779018,
+          "difficulty": 9.69762181929684,
+          "interval": 0.1470924832706814
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.365,
+          "difficulty": 9.698
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 0.40980867525825576,
+          "difficulty": 9.68353036929684,
+          "interval": 0.1649720442781148
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.41,
+          "difficulty": 9.684
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 0.4568249682765055,
+          "difficulty": 9.669544369296837,
+          "interval": 0.18389886169775962
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.457,
+          "difficulty": 9.67
+        },
+        "days_elapsed": 1,
+        "rating": 1,
+        "expected": {
+          "stability": 0.17530884103871744,
+          "difficulty": 9.876759613296839,
+          "interval": 0.07057209774282751
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 9",
+    "desired_retention": 0.85,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 4.397171875886648
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 3,
+        "rating": 3,
+        "expected": {
+          "stability": 13.827945835931017,
+          "difficulty": 2.111110369296838,
+          "interval": 26.361957308059722
+        }
+      },
+      {
+        "memory": {
+          "stability": 13.828,
+          "difficulty": 2.111
+        },
+        "days_elapsed": 200,
+        "rating": 3,
+        "expected": {
+          "stability": 175.58508170582817,
+          "difficulty": 2.1041173692968385,
+          "interval": 334.7399883382297
+        }
+      },
+      {
+        "memory": {
+          "stability": 175.585,
+          "difficulty": 2.104
+        },
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 44.36881003453201,
+          "difficulty": 7.389866862096838,
+          "interval": 84.58585894229415
+        }
+      },
+      {
+        "memory": {
+          "stability": 44.369,
+          "difficulty": 7.39
+        },
+        "days_elapsed": 400,
+        "rating": 3,
+        "expected": {
+          "stability": 192.09328563594423,
+          "difficulty": 7.377838369296838,
+          "interval": 366.2116597203705
+        }
+      },
+      {
+        "memory": {
+          "stability": 192.093,
+          "difficulty": 7.378
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 192.093,
+          "difficulty": 7.3658503692968385,
+          "interval": 366.21111517654185
+        }
+      },
+      {
+        "memory": {
+          "stability": 192.093,
+          "difficulty": 7.366
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 192.093,
+          "difficulty": 7.353862369296838,
+          "interval": 366.21111517654185
+        }
+      },
+      {
+        "memory": {
+          "stability": 192.093,
+          "difficulty": 7.354
+        },
+        "days_elapsed": 30,
+        "rating": 1,
+        "expected": {
+          "stability": 4.066754140931715,
+          "difficulty": 9.115506162096837,
+          "interval": 7.752966370973554
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 10",
+    "desired_retention": 0.85,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 0.212,
+          "difficulty": 6.4133,
+          "interval": 0.4041623402072271
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.212,
+          "difficulty": 6.413
+        },
+        "days_elapsed": 7,
+        "rating": 3,
+        "expected": {
+          "stability": 3.4422592796721645,
+          "difficulty": 6.4018153692968385,
+          "interval": 6.562413047511066
+        }
+      },
+      {
+        "memory": {
+          "stability": 3.442,
+          "difficulty": 6.402
+        },
+        "days_elapsed": 7,
+        "rating": 3,
+        "expected": {
+          "stability": 14.483165000958937,
+          "difficulty": 6.390826369296838,
+          "interval": 27.61108424714609
+        }
+      },
+      {
+        "memory": {
+          "stability": 14.483,
+          "difficulty": 6.391
+        },
+        "days_elapsed": 200,
+        "rating": 3,
+        "expected": {
+          "stability": 100.37893768566737,
+          "difficulty": 6.379837369296839,
+          "interval": 191.36503001205068
+        }
+      },
+      {
+        "memory": {
+          "stability": 100.379,
+          "difficulty": 6.38
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 100.379,
+          "difficulty": 6.368848369296838,
+          "interval": 191.36514880972288
+        }
+      },
+      {
+        "memory": {
+          "stability": 100.379,
+          "difficulty": 6.369
+        },
+        "days_elapsed": 3,
+        "rating": 3,
+        "expected": {
+          "stability": 105.34836821716021,
+          "difficulty": 6.357859369296838,
+          "interval": 200.8388822436799
+        }
+      },
+      {
+        "memory": {
+          "stability": 105.348,
+          "difficulty": 6.358
+        },
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 27.53056509016906,
+          "difficulty": 8.788127734896838,
+          "interval": 52.48498874561376
+        }
+      },
+      {
+        "memory": {
+          "stability": 27.531,
+          "difficulty": 8.788
+        },
+        "days_elapsed": 30,
+        "rating": 1,
+        "expected": {
+          "stability": 2.1849338898188697,
+          "difficulty": 9.586852210896838,
+          "interval": 4.165415066543745
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 11",
+    "desired_retention": 0.95,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 0.9285016230749165
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.307,
+          "difficulty": 2.111110369296838,
+          "interval": 0.9287029024209112
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.111
+        },
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.307,
+          "difficulty": 2.1041173692968385,
+          "interval": 0.9287029024209112
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.104
+        },
+        "days_elapsed": 60,
+        "rating": 1,
+        "expected": {
+          "stability": 1.0069846463663301,
+          "difficulty": 7.389866862096838,
+          "interval": 0.40537042209523444
+        }
+      },
+      {
+        "memory": {
+          "stability": 1.007,
+          "difficulty": 7.39
+        },
+        "days_elapsed": 30,
+        "rating": 3,
+        "expected": {
+          "stability": 10.08640537810744,
+          "difficulty": 7.377838369296838,
+          "interval": 4.060370155891751
+        }
+      },
+      {
+        "memory": {
+          "stability": 10.086,
+          "difficulty": 7.378
+        },
+        "days_elapsed": 3,
+        "rating": 3,
+        "expected": {
+          "stability": 15.141108194470036,
+          "difficulty": 7.3658503692968385,
+          "interval": 6.095184710044806
+        }
+      },
+      {
+        "memory": {
+          "stability": 15.141,
+          "difficulty": 7.366
+        },
+        "days_elapsed": 1,
+        "rating": 3,
+        "expected": {
+          "stability": 16.89127339244441,
+          "difficulty": 7.353862369296838,
+          "interval": 6.799728922907776
+        }
+      },
+      {
+        "memory": {
+          "stability": 16.891,
+          "difficulty": 7.354
+        },
+        "days_elapsed": 30,
+        "rating": 1,
+        "expected": {
+          "stability": 1.888058696126428,
+          "difficulty": 9.115506162096837,
+          "interval": 0.7600544391129845
+        }
+      }
+    ]
+  },
+  {
+    "description": "seeded history 12",
+    "desired_retention": 0.85,
+    "steps": [
+      {
+        "memory": null,
+        "days_elapsed": 0,
+        "rating": 3,
+        "expected": {
+          "stability": 2.3065,
+          "difficulty": 2.118103970459015,
+          "interval": 4.397171875886648
+        }
+      },
+      {
+        "memory": {
+          "stability": 2.307,
+          "difficulty": 2.118
+        },
+        "days_elapsed": 400,
+        "rating": 3,
+        "expected": {
+          "stability": 65.61535151628614,
+          "difficulty": 2.111110369296838,
+          "interval": 125.09082086010395
+        }
+      },
+      {
+        "memory": {
+          "stability": 65.615,
+          "difficulty": 2.111
+        },
+        "days_elapsed": 3,
+        "rating": 3,
+        "expected": {
+          "stability": 75.77436170736921,
+          "difficulty": 2.1041173692968385,
+          "interval": 144.45822337433603
+        }
+      },
+      {
+        "memory": {
+          "stability": 75.774,
+          "difficulty": 2.104
+        },
+        "days_elapsed": 3,
+        "rating": 1,
+        "expected": {
+          "stability": 3.0488666735495875,
+          "difficulty": 7.389866862096838,
+          "interval": 5.812439102649176
+        }
+      },
+      {
+        "memory": {
+          "stability": 3.049,
+          "difficulty": 7.39
+        },
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 1.0059525752334926,
+          "difficulty": 9.127339117296838,
+          "interval": 1.9177742780370521
+        }
+      },
+      {
+        "memory": {
+          "stability": 1.006,
+          "difficulty": 9.127
+        },
+        "days_elapsed": 3,
+        "rating": 3,
+        "expected": {
+          "stability": 3.005154090055551,
+          "difficulty": 9.113101369296839,
+          "interval": 5.729104291132885
+        }
+      },
+      {
+        "memory": {
+          "stability": 3.005,
+          "difficulty": 9.113
+        },
+        "days_elapsed": 0,
+        "rating": 1,
+        "expected": {
+          "stability": 0.9923844503829751,
+          "difficulty": 9.693677500896838,
+          "interval": 1.8919076502455006
+        }
+      },
+      {
+        "memory": {
+          "stability": 0.992,
+          "difficulty": 9.694
+        },
+        "days_elapsed": 400,
+        "rating": 1,
+        "expected": {
+          "stability": 0.691856942228666,
+          "difficulty": 9.88464825009684,
+          "interval": 1.3189741549988396
+        }
+      }
+    ]
+  }
+]
