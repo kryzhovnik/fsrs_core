@@ -47,18 +47,6 @@ cd test/support/golden_gen && cargo run --locked > ../golden.json
 ```
 No Rust is needed to use the gem or run the ordinary Ruby suite — `golden.json` is committed.
 
-## Duck step sequences
-
-`test/support/duck_step_sequences.json` holds the `next_state` calls behind Duck's scheduler
-vectors: review sequences with binary ratings (1 or 3), whole elapsed days and the three-decimal
-memory Duck stores between reviews. They are f64 values from this gem, checked with a 1e-9
-relative tolerance, and are the numbers Duck's native Swift and Kotlin ports are held to. Duck
-writes the file; regenerate it from a Duck checkout when the math or the cases change:
-
-```bash
-bin/rails "scheduler:vectors:fsrs_core[/path/to/fsrs_core]"
-```
-
 ## Tests
 
 The normal suite is fast and does not require Rust:

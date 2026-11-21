@@ -7,7 +7,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: ["3.2", "3.3", "3.4", "4.0"]   # 3.2 = lower bound; 4.0 = Duck's runtime
+        ruby: ["3.2", "3.3", "3.4", "4.0"]   # 3.2 = lower bound; 4.0 = latest
     steps:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1

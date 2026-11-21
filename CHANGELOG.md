@@ -7,11 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-
-- Duck step sequences (`test/support/duck_step_sequences.json`): the `next_state` calls behind
-  Duck's scheduler vectors, checked in f64 with a 1e-9 relative tolerance.
-
 ## [0.1.0] - 2026-06-28
 
 ### Added
